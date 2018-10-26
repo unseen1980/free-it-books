@@ -525,7 +525,10 @@
 		"[Pro Git Reedited](https://leanpub.com/progitreedited/read) - Jon Forrest",
 		"[Ry's Git Tutorial](https://web.archive.org/web/20161121145226/http://rypress.com:80/tutorials/git/index) - Ryan Hodson",
 		"[Think Like (a) Git: A Guide for the Perplexed](http://think-like-a-git.net)",
-		"[Version Control by Example (Mercurial, Subversion, Verasity)](https://ericsink.com/vcbe/index.html)"
+		"[Version Control by Example (Mercurial, Subversion, Verasity)](https://ericsink.com/vcbe/index.html)",
+		"[Basics of Git - The Simple Quick Start Guide](https://blog.praveen.science/basics-of-git-the-quick-start-guide/)",
+		"[Git Standards followed in our way of Spotify Agile Methodology](https://blog.praveen.science/git-standards-followed-in-our-way-of-spotify-agile-methodolgy/)",
+		"[Git Shortcuts](https://blog.praveen.science/git-shortcuts/)"
 	],
 	"Go": [
 		"[An Introduction to Programming in Go](http://www.golang-book.com)",
