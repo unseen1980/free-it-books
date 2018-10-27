@@ -1,7 +1,7 @@
 
 
 export function nameHelper(str) {
-    if(typeof str != 'string') return
+    if(typeof str !== 'string') return
     return str.substring(
         str.lastIndexOf('[') + 1,
         str.lastIndexOf(']')

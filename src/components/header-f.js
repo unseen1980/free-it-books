@@ -46,7 +46,7 @@ class HeaderF extends Component {
 
     render() {
         const {searchString, searchOpen, results, resultLimit} = this.state
-        console.log('results', results)
+
         return (
             <div className="fd-ui__header">
                 <nav className="fd-global-nav">
