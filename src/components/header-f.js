@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import books from '../books.json';
+import { flatList } from '../common/data/booksparser'
+
+const flatbooks = flatList(books)
+console.log('books', flatbooks)
 
 class HeaderF extends Component {
     componentWillMount(props) {
+
         this.setState({searchOpen: false, searchString: ''})
     }
 
