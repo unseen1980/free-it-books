@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import books from '../books.json';
 import { flatList } from '../common/data/booksparser'
+import './header.css'
 
 const flatbooks = flatList(books)
-console.log('books', flatbooks)
+const bookDisplayLimit = 10;
 
 class HeaderF extends Component {
     componentWillMount(props) {
@@ -23,8 +24,13 @@ class HeaderF extends Component {
 
     searchUpdated = (event) => {
         const inputVal = event.currentTarget.value
-        const books = this.filterBooks(inputVal)
-        this.setState({searchString: inputVal, results: books})
+        let books = this.filterBooks(inputVal)
+        const limit = books.length > bookDisplayLimit;
+        if (limit) {
+            books = books.filter((item,idx) => idx <= bookDisplayLimit)
+        }
+
+        this.setState({searchString: inputVal, results: books, resultLimit:limit})
     }
 
     filterBooks (str) {
@@ -39,8 +45,8 @@ class HeaderF extends Component {
     }
 
     render() {
-        const {searchString, searchOpen, results} = this.state
-        console.log('len', results.length, results)
+        const {searchString, searchOpen, results, resultLimit} = this.state
+        console.log('results', results)
         return (
             <div className="fd-ui__header">
                 <nav className="fd-global-nav">
@@ -66,9 +72,14 @@ class HeaderF extends Component {
                             <div className="search-results">
                                 {results.map((item,idx) => (
                                     <div className="result" key={idx+item.title+item.subject}>
-                                        {item.title} ({item.subject})
+                                        <a href={item.url} target="_blank">
+                                            {item.title} ({item.subject})
+                                        </a>
                                     </div>
                                 ))}
+                                {resultLimit && (
+                                    <div>To many results</div>
+                                )}
                             </div>
                         )}
                     </div>

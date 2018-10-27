@@ -11,6 +11,9 @@ export function nameHelper(str) {
 export function urlHelper(text) {
     const urlRegex = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
     const c = text.match(urlRegex, (url) => url);
+    if(Array.isArray(c)) {
+        return c[0]
+    }
     return c;
 }
 
