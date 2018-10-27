@@ -9,7 +9,7 @@ console.log('books', flatbooks)
 class HeaderF extends Component {
     componentWillMount(props) {
 
-        this.setState({searchOpen: false, searchString: ''})
+        this.setState({searchOpen: false, searchString: '', results: []})
     }
 
     searchClicked = () => {
@@ -23,12 +23,24 @@ class HeaderF extends Component {
 
     searchUpdated = (event) => {
         const inputVal = event.currentTarget.value
-        this.setState({searchString: inputVal})
+        const books = this.filterBooks(inputVal)
+        this.setState({searchString: inputVal, results: books})
+    }
+
+    filterBooks (str) {
+        const lowStr = str.toLowerCase()
+        if(str == '') {
+            return []
+        }
+        return flatbooks.filter(book => {
+            return book.subject.toLowerCase().indexOf(lowStr) !== -1 ||
+                   book.title.toLowerCase().indexOf(lowStr) !== -1
+        })
     }
 
     render() {
-        const {searchString, searchOpen} = this.state
-
+        const {searchString, searchOpen, results} = this.state
+        console.log('len', results.length, results)
         return (
             <div className="fd-ui__header">
                 <nav className="fd-global-nav">
@@ -50,6 +62,15 @@ class HeaderF extends Component {
                                        placeholder="Search... " value={searchString} onChange={this.searchUpdated}/>
                             </div>
                         </div>
+                        {results.length !== 0 && (
+                            <div className="search-results">
+                                {results.map((item,idx) => (
+                                    <div className="result" key={idx+item.title+item.subject}>
+                                        {item.title} ({item.subject})
+                                    </div>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </nav>
             </div>
