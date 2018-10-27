@@ -2,7 +2,27 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
 class HeaderF extends Component {
+    componentWillMount(props) {
+        this.setState({searchOpen: false, searchString: ''})
+    }
+
+    searchClicked = () => {
+        const {searchString, searchOpen} = this.state
+        if (searchOpen) {
+            this.setState({searchOpen: false, searchString: ''})
+        } else {
+            this.setState({searchOpen: true})
+        }
+    }
+
+    searchUpdated = (event) => {
+        const inputVal = event.currentTarget.value
+        this.setState({searchString: inputVal})
+    }
+
     render() {
+        const {searchString, searchOpen} = this.state
+
         return (
             <div className="fd-ui__header">
                 <nav className="fd-global-nav">
@@ -19,8 +39,9 @@ class HeaderF extends Component {
                         <div className="fd-global-nav__actions">
                             <div className="fd-global-nav__search">
                                 <button className=" fd-button--secondary fd-button--m sap-icon--search fd-global-nav__btn"
-                                    aria-label="BUTTON_LABEL" aria-controls="RUmA0636" aria-haspopup="true" aria-expanded="false"></button>
-                                <input type="text" className="fd-form__control" id="RUmA0636" aria-hidden="true" placeholder="Search... " />
+                                        aria-label="BUTTON_LABEL" aria-controls="RUmA0636" aria-haspopup="true" aria-expanded={searchOpen} onClick={this.searchClicked}></button>
+                                <input type="text" className="fd-form__control" id="RUmA0636" aria-hidden={!searchOpen}
+                                       placeholder="Search... " value={searchString} onChange={this.searchUpdated}/>
                             </div>
                         </div>
                     </div>
