@@ -17,7 +17,7 @@
 	],
 	"Ada": [
 		"[A Guide to Ada for C and C++ Programmers](http://www.cs.uni.edu/~mccormic/4740/guide-c2ada.pdf)",
-		"[Ada Distilled](http://www.adapower.com/pdfs/AdaDistilled07-27-2003.pdf)",
+		"[Ada Distilled](http://www.adaic.org/resources/add_content/docs/distilled/adadistilled.pdf)",
 		"[Ada Programming](https://en.wikibooks.org/wiki/Ada_Programming) - Wikibooks",
 		"[Ada Reference Manual - ISO/IEC 8652:2012(E) Language and Standard Libraries](http://www.ada-auth.org/standards/12rm/RM-Final.pdf)",
 		"[The Big Online Book of Linux Ada Programming](http://www.pegasoft.ca/resources/boblap/book.html)"
@@ -113,7 +113,7 @@
 		"[Assembly Language Succinctly](https://www.syncfusion.com/resources/techportal/details/ebooks/assemblylanguage)",
 		"[PC Assembly Language](http://drpaulcarter.com/pcasm/) - P. A. Carter",
 		"[Professional Assembly Language](https://web.archive.org/web/20170329045538/http://blog.hit.edu.cn:80/jsx/upload/AT%EF%BC%86TAssemblyLanguage.pdf)",
-		"[Programming from the Ground Up](http://mirror.unicorncloud.org/savannah-nongnu//pgubook/ProgrammingGroundUp-1-0-booksize.pdf)",
+		"[Programming from the Ground Up](https://download-mirror.savannah.gnu.org/releases/pgubook/ProgrammingGroundUp-1-0-booksize.pdf)",
 		"[Ralf Brown's Interrupt List](http://www.ctyme.com/rbrown.htm)",
 		"[Software optimization resources](http://www.agner.org/optimize/) - A. Fog",
 		"[Wizard Code](http://vendu.twodots.nl/wizardcode.html)",
@@ -282,7 +282,6 @@
 		"[Clojure Distilled Beginner Guide](http://yogthos.github.io/ClojureDistilled.html)",
 		"[Clojure for the Brave and True](http://www.braveclojure.com)",
 		"[Clojure in Small Pieces](http://daly.axiom-developer.org/clojure.pdf) - Rich Hickey",
-		"[Clojure Koans](http://clojurekoans.com)",
 		"[Clojure Programming](https://en.wikibooks.org/wiki/Clojure_Programming) - Wikibooks",
 		"[ClojureScript Koans](http://clojurescriptkoans.com)",
 		"[ClojureScript Unraveled](https://funcool.github.io/clojurescript-unraveled/) (HTML)",
@@ -451,7 +450,7 @@
 		"[AngularJs vs EmberJs](http://angularjs-emberjs-compare.bguiz.com)",
 		"[DockYard Ember.js Style Guide](https://github.com/DockYard/styleguides/blob/master/engineering/ember.md)",
 		"[Ember App with RailsApi](https://dockyard.com/blog/ember/2013/01/07/building-an-ember-app-with-rails-api-part-1)",
-		"[Ember.js - Getting started](http://emberjs.com/guides/getting-started/)",
+		"[Ember.js - Getting started](https://guides.emberjs.com/release/)",
 		"[Vic Ramon's Ember Tutorial](http://ember.vicramon.com)"
 	],
 	"Erlang": [
@@ -526,7 +525,10 @@
 		"[Pro Git Reedited](https://leanpub.com/progitreedited/read) - Jon Forrest",
 		"[Ry's Git Tutorial](https://web.archive.org/web/20161121145226/http://rypress.com:80/tutorials/git/index) - Ryan Hodson",
 		"[Think Like (a) Git: A Guide for the Perplexed](http://think-like-a-git.net)",
-		"[Version Control by Example (Mercurial, Subversion, Verasity)](http://ericsink.com/vcbe/)"
+		"[Version Control by Example (Mercurial, Subversion, Verasity)](https://ericsink.com/vcbe/index.html)",
+		"[Basics of Git - The Simple Quick Start Guide](https://blog.praveen.science/basics-of-git-the-quick-start-guide/)",
+		"[Git Standards followed in our way of Spotify Agile Methodology](https://blog.praveen.science/git-standards-followed-in-our-way-of-spotify-agile-methodolgy/)",
+		"[Git Shortcuts](https://blog.praveen.science/git-shortcuts/)"
 	],
 	"Go": [
 		"[An Introduction to Programming in Go](http://www.golang-book.com)",
