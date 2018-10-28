@@ -1,0 +1,12 @@
+.search-results {
+  position:absolute;
+  width: 300px;
+  background: white;
+  right: 10px;
+  top: 50px;
+  padding: 10px;
+  border: solid 1px #eeeeef;
+}
+.search-results .result {
+  margin-bottom: 6px;
+}
